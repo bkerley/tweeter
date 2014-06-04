@@ -1,3 +1,6 @@
+<%= link_to 'Previous page', page: @page - 1 %>
+<%= link_to 'Next page', page: @page + 1 %>
+
 <% @statuses.each do |s| %>
   <%= div_for s do %>
     <p><%= s.body %></p>

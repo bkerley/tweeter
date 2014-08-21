@@ -13,6 +13,8 @@ class StatusesController < ApplicationController
 
   def create
     @status = Status.create status_params
+
+    redirect_to statuses_path
   end
 
   def show

@@ -7,6 +7,9 @@ class StatusesController < ApplicationController
       limit(25).
       offset(offset).
       all
+
+    @new_status = Status.new
+  end
   end
 
   def show

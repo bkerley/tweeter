@@ -1,6 +1,12 @@
 <%= link_to 'Previous page', page: @page - 1 %>
 <%= link_to 'Next page', page: @page + 1 %>
 
+<h1>Post a cool new and interesting status here:</h1>
+<%= form_for @new_status do |f| %>
+<%= f.text_field :body, placeholder: 'unique insight goes here', size: 80 %>
+<%= f.submit 'post' %>
+<% end %>
+
 <% @statuses.each do |s| %>
   <%= div_for s do %>
     <p><%= s.body %></p>

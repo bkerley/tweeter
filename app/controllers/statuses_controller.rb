@@ -10,11 +10,19 @@ class StatusesController < ApplicationController
 
     @new_status = Status.new
   end
+
+  def create
+    @status = Status.create status_params
   end
 
   def show
   end
 
   def new
+  end
+
+  private
+  def status_params
+    params.require(:status).permit(:body)
   end
 end
